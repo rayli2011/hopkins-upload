@@ -32,8 +32,7 @@
             </tr>
         </table>
 
-        Thanks for participate with this system. there are three role to play in this 
-        sytem.<br /> 1.student<br /> 2.Faculty<br /> 3. TA<br />
+        <br />
         <br />
         <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="submit" />
 </asp:Panel>
