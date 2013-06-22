@@ -12,11 +12,21 @@
         {
             background-color: #CCFFFF;
         }
+        .style1
+        {
+            text-decoration: underline;
+            color: #CC0000;
+            font-size: large;
+        }
     </style>
 
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
    
+    <span class="style1"><strong>this is the new uploading form!!!!</strong></span>
+    <br />
+    <br />
+<br />
      
     <asp:FileUpload ID="FileUpload1" runat="server" Height="22px" />
  

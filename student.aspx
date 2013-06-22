@@ -13,7 +13,7 @@
         <asp:Label ID="vers" runat="server" Text="lastest version"></asp:Label>
         <br />
         <br />
-        <asp:Button ID="modify" runat="server" Text="submit modify version!!" 
+        <asp:Button ID="modify" runat="server" Text="modify version!!" 
             onclick="Button1_Click" style="background-color: #999966" Width="140px" />
         &nbsp;&nbsp;&nbsp;
         <asp:Button ID="new" runat="server" style="background-color: #666699" 

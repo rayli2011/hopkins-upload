@@ -32,7 +32,7 @@ public partial class register : System.Web.UI.Page
             Session["userid"] = rowid;
             Session["studentstates"] = "1";
             Session["username"] = username.Text;
-            Response.Redirect("newload.aspx");
+            Response.Redirect("studentover.aspx");
             con.Close();
         }
         else

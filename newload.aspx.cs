@@ -47,17 +47,17 @@ public partial class TA : System.Web.UI.Page
             
         }
         string select1 = "insert into uploadinfo (uploadpersonid,title,abstract,filename,uploaddate,category,url,version)values('" + uploadid + "','" + title.Text + "','" + T1.Value + "','" + filename + "','" + DateTime.Today + "','" + DropDownList1.SelectedValue + "','" + url + "','" + version + "')";
-        string select2 = "update uploadinfo set (uploadpersonid,title,abstract,filename,uploaddate,category,url,version)values('" + uploadid + "','" + title.Text + "','" + T1.Value + "','" + filename + "','" + DateTime.Today + "','" + DropDownList1.SelectedValue + "','" + url + "','" + version + "')";
-        if (state == 2)
-        {
+        //string select2 = "update uploadinfo set (uploadpersonid,title,abstract,filename,uploaddate,category,url,version)values('" + uploadid + "','" + title.Text + "','" + T1.Value + "','" + filename + "','" + DateTime.Today + "','" + DropDownList1.SelectedValue + "','" + url + "','" + version + "')";
+       // if (state == 2)
+      //  {
             selective = select1;
             version = 1;
-        }
-        else
-        {
-            selective = select2;
-            version = Convert.ToInt16(Session["lastversion"].ToString())+1;
-        }
+       // }
+        //else
+        //{
+        //    selective = select2;
+        //    version = Convert.ToInt16(Session["lastversion"].ToString())+1;
+        //}
 
         SqlConnection con = new SqlConnection("Data Source=FENG-PC;Initial Catalog= files;Trusted_Connection=True");
         con.Open();
