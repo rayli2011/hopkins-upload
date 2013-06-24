@@ -31,13 +31,18 @@ public partial class modify : System.Web.UI.Page
 
         }
 
+
+    }
+    protected void UploadButton_Click(object sender, EventArgs e)
+    {
         SqlConnection con = new SqlConnection("Data Source=FENG-PC;Initial Catalog= files;Trusted_Connection=True");
         con.Open();
-        string select = "update uploadinfo set (title,abstract,filename,uploaddate,url,version)values('" + TextBox1.Text + "','" + t2.Value + "','" + filename + "','" + DateTime.Today + "','" +  url + "','" + version + "')";
+        string select = "update uploadinfo set (title,abstract,filename,uploaddate,url,version)values('" + TextBox1.Text + "','" + t2.Value + "','" + filename + "','" + DateTime.Today + "','" + url + "','" + version + "')";
 
         SqlCommand seletive = new SqlCommand(select, con);
         SqlDataReader reader = seletive.ExecuteReader();
 
         con.Close();
+
     }
 }

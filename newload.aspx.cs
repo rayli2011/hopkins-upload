@@ -22,7 +22,7 @@ public partial class TA : System.Web.UI.Page
     {
         state = Convert.ToInt16(Session["studentstates"].ToString());
         uid = Convert.ToInt16(Session["userid"].ToString());
-        username = (Session["username"].ToString());
+        username = (Session["name"].ToString());
         DropDownList1.Visible = true;
         if (state == 2)
         {

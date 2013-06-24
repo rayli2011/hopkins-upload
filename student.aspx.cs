@@ -52,6 +52,7 @@ public partial class students : System.Web.UI.Page
         Session["verson"] = version;
         Session["title"] = title;
         Session["abstract"] = abs;
+        Response.Redirect("modify.aspx");
 
 
     }
