@@ -16,7 +16,7 @@
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
         DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True">
         <Columns>
-            <asp:CommandField ShowSelectButton="True" />
+          
             <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
             <asp:BoundField DataField="uploaddate" HeaderText="uploaddate" 
                 SortExpression="uploaddate" />
@@ -25,10 +25,14 @@
             <asp:BoundField DataField="version" HeaderText="version" 
                 SortExpression="version" />
             <asp:BoundField DataField="filename" HeaderText="filename" 
-                SortExpression="filename" />
-            <asp:BoundField DataField="uploadid" HeaderText="status(upload_id)" 
-                SortExpression="uploadid" />
-            <asp:CommandField />
+                SortExpression="filename" />        
+            <asp:ButtonField CommandName="Update" CommandArgument= '<%# DataBinder.Eval(Container.DataItem,"uploadid") %>' HeaderText="Details" ShowHeader="True" 
+                Text="Status" />
+            
+            
+      
+            
+            
         </Columns>
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
