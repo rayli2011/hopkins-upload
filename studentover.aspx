@@ -14,7 +14,9 @@
     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/newload.aspx">new upload?</asp:HyperLink><br />
     <br />
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-        DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True">
+        DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True" 
+        OnRowCommand="GridViewCommandEventHandler" 
+        onselectedindexchanged="GridView1_SelectedIndexChanged1">
         <Columns>
           
             <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
@@ -26,12 +28,17 @@
                 SortExpression="version" />
             <asp:BoundField DataField="filename" HeaderText="filename" 
                 SortExpression="filename" />        
-            <asp:ButtonField CommandName="Update" CommandArgument= '<%# DataBinder.Eval(Container.DataItem,"uploadid") %>' HeaderText="Details" ShowHeader="True" 
-                Text="Status" />
+                
+     <%--       <asp:ButtonField CommandName="changed" HeaderText="Details" ShowHeader="True" 
+                Text="Status" />--%>
+             <asp:TemplateField HeaderText="changed2" ShowHeader="False">
+              <ItemTemplate>
+                <asp:Button ID="btn1" runat="server" CausesValidation="false" Text="status" CommandArgument='<%#Eval("uploadid") %>' OnClick="ray" />
+               </ItemTemplate>
+            </asp:TemplateField>    
             
-            
-      
-            
+    
+
             
         </Columns>
     </asp:GridView>
