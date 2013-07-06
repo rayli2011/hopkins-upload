@@ -15,30 +15,22 @@ public partial class studentover : System.Web.UI.Page
         name = Session["name"].ToString();
         Session["userid"] = sid;
         Session["name"] = name;
-        Session["studentstates"] = "1";
+        //Session["ves"]=
+        //Session["studentstates"] = "1";
     }
     protected void GridViewCommandEventHandler (object sender, GridViewCommandEventArgs e)
     {
-        if (e.CommandName == "changed")
-        {
-            int rowIndex = Convert.ToInt32(e.CommandArgument);
 
-
-            Response.Redirect("www.sina.com");
-       
-        }
     }
 
 
   
     protected void ray (object sender, EventArgs e)
     {
-        Button btn = (Button)sender;
-
-      
-
-       int CommandArgument =Convert.ToInt16( btn.CommandArgument); 
-        
+       Button btn = (Button)sender;
+       int CommandArgument =Convert.ToInt16( btn.CommandArgument);
+       Session["upid"] = CommandArgument;
+       Response.Redirect("student.aspx");
 
     }
     protected void GridView1_SelectedIndexChanged1(object sender, EventArgs e)

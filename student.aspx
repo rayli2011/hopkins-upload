@@ -10,7 +10,6 @@
     <form id="form1" runat="server">
     <div style="background-color: #CCCCFF">
     
-        <asp:Label ID="vers" runat="server" Text="lastest version"></asp:Label>
         <br />
         <br />
         <asp:Button ID="modify" runat="server" Text="modify version!!" 
@@ -20,7 +19,7 @@
             Text="New Submit" Width="164px" onclick="Button2_Click" />
         <br />
         <br />
-        average score:<asp:Label ID="score" runat="server" Text="score"></asp:Label>
+        average score on this article :<asp:Label ID="score" runat="server" ></asp:Label>
         <br />
         <br />
         <br />
@@ -33,21 +32,21 @@
             Width="911px" 
         style="background-color: #FFCCFF">
             <ItemTemplate>
-        <table border="2px" cellspacing="2px">
-       <tr>
-        <td class="style2"> username: <asp:Label ID="usernameLabel" runat="server" Text='<%# Eval("comment") %>' /></td>
-         <td class="style3"> Date:   <asp:Label ID="dateLabel" Width="200px" runat="server" Text='<%# Eval("scoredate") %>' />
-         </td>
-       </tr>
-
-        </table>
+                comments:
+                <asp:Label ID="commentsLabel" runat="server" Text='<%# Eval("comments") %>' />
+                <br />
+                scoredate:
+                <asp:Label ID="scoredateLabel" runat="server" Text='<%# Eval("scoredate") %>' />
+                <br />
+                <br />
             </ItemTemplate>
         </asp:DataList>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:connection %>" 
-            SelectCommand="SELECT  [comments], [scoredate] FROM [score] where [uploadingid] =@userid  ORDER BY [scoredate]">
+            
+        SelectCommand="SELECT [comments], [scoredate] FROM [score] WHERE ([uploadingid] = @uploadingid)">
         <selectparameters>
-        <asp:SessionParameter Name="userid" SessionField="userid" />
+        <asp:SessionParameter Name="uploadingid" SessionField="upid" Type="Int32" />
         </selectparameters>
        
         </asp:SqlDataSource>

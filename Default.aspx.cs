@@ -34,7 +34,9 @@ public partial class _Default : System.Web.UI.Page
             }
             else if (reader[4].ToString() == "F")
             {
-                Response.Redirect("faculty.aspx");
+                Session["categ"] = reader[6].ToString();
+                Response.Redirect("teacher.aspx");
+              
             }
             else if (reader[4].ToString() == "TA")
             {

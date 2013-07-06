@@ -20,16 +20,16 @@ public partial class TA : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        state = Convert.ToInt16(Session["studentstates"].ToString());
+        //state = Convert.ToInt16(Session["studentstates"].ToString());
         uid = Convert.ToInt16(Session["userid"].ToString());
         username = (Session["name"].ToString());
         DropDownList1.Visible = true;
-        if (state == 2)
-        {
-            DropDownList1.Visible = false;
+        //if (state == 2)
+        //{
+        //    DropDownList1.Visible = false;
 
 
-        }
+        //}
         
 
     }
@@ -66,6 +66,6 @@ public partial class TA : System.Web.UI.Page
         SqlDataReader reader = seletive.ExecuteReader();
         con.Close();
         Session["name"] = username;
-        Response.Redirect("student.aspx");
+        Response.Redirect("about.aspx");
     }
 }

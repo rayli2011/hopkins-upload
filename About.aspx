@@ -1,13 +1,14 @@
-﻿<%@ Page Title="About Us" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
+﻿<%@ Page Title="About Us" Language="C#" AutoEventWireup="true"
     CodeFile="About.aspx.cs" Inherits="About" %>
+<http>
+<meta http-equiv="Refresh" content="10; url=Default.aspx" />
 
-<asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
-</asp:Content>
-<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <h2>
-        About
+       this is student and TA and Faculty using homework checking system.
+       thanks for you submitt or modify, you will be grad soon.
     </h2>
     <p>
-        this is student and TA and Faculty using homeweol checking system.
+     
     </p>
-</asp:Content>
+
+</http>
