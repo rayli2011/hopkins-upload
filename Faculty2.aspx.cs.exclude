@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.Sql;
+using System.Data.SqlClient;
+
+
+public partial class Faculty : System.Web.UI.Page
+{
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        int id = Convert.ToInt16(Session["uid"]);
+
+         
+            SqlConnection con = new SqlConnection("Data Source=FENG-PC;Initial Catalog= files;Trusted_Connection=True");
+            con.Open();
+            string select = "select title,abstract,filename,uploaddate,category,version,username, from uploadinfo,userinfo where uploadid= '" + id + "'and userid=uploadpersonid";
+            SqlCommand seletive = new SqlCommand(select, con);
+            SqlDataReader reader = seletive.ExecuteReader();
+            if (reader.Read())
+            {
+
+                title.Text = reader[0].ToString();
+                at.Text = reader[1].ToString();
+                uploader.Text = reader[6].ToString();
+                times.Text = reader[3].ToString();
+
+
+            }
+
+        
+    }
+}
