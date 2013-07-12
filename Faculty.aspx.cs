@@ -47,6 +47,13 @@ public partial class Faculty : System.Web.UI.Page
     protected void Button2_Click(object sender, EventArgs e)
     {
         SendEmail(tinfo.Text, body.Text, "rayli2011@gmail.com","rayli2011", "towson123", "smtp.gmail.com");
+        SqlConnection con = new SqlConnection("Data Source=FENG-PC;Initial Catalog= files;Trusted_Connection=True");
+        con.Open();
+        string select = " insert into assign(assignfromid,assignto,assigndate,uploadid) values('" + Convert.ToInt16(Session["scoreing"]) + "', '" + email.Text + "','" + DateTime.Today + "','" + id+"') ";
+        SqlCommand seletive = new SqlCommand(select, con);
+        SqlDataReader reader = seletive.ExecuteReader();
+
+        con.Close();
 
 
     }
@@ -64,7 +71,7 @@ public partial class Faculty : System.Web.UI.Page
             mail.Subject = mailSubject;
             mail.From = ma;
             mail.To.Add(email.Text);
-            mail.Body = mailBody;
+            mail.Body = mailBody+"please login to score those articles";
             mail.IsBodyHtml = true;
 
             //Preparing the smtp client to send the mailMessage 
@@ -78,11 +85,11 @@ public partial class Faculty : System.Web.UI.Page
 
             //Sending message using smtp client 
             smtp.Send(mail);
-            Response.Write("Your Message has been sent successfully");
+            Label1.Text="Your Message has been sent successfully";
         }
         catch (Exception ex)
         {
-            Response.Write("Message Delivery Fails"+ex.Message);
+            Label1.Text="Message Delivery Fails"+ex.Message;
 
         }
     }

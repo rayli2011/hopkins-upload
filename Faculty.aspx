@@ -42,16 +42,21 @@
         
             <br />
             <br />
-            TA-username(email):<asp:TextBox ID="email" runat="server" Height="22px" 
-                Width="235px"></asp:TextBox>
+            TA-username(email):&nbsp;
+            <asp:TextBox ID="email" runat="server" Height="16px" 
+                Width="224px"></asp:TextBox>
             <br />
             <br />
             Email Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-            <asp:TextBox ID="tinfo" runat="server" Width="230px"></asp:TextBox>
+            <asp:TextBox ID="tinfo" runat="server" Width="230px" Height="16px"></asp:TextBox>
             <br />
             <br />
             Email Boday:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="body" runat="server" Height="53px" Width="228px"></asp:TextBox>
+            <br />
+            <br />
+            <br />
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
             <br />
             <br />
             <asp:Button ID="Button2" runat="server" onclick="Button2_Click" Text="assign" 

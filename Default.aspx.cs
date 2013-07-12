@@ -40,7 +40,7 @@ public partial class _Default : System.Web.UI.Page
             }
             else if (reader[4].ToString() == "TA")
             {
-                Response.Redirect("TA.aspx");
+                Response.Redirect("assistant.aspx");
             }
 
 
