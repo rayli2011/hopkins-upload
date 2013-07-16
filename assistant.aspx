@@ -61,16 +61,19 @@
                <asp:LinkButton ID="LinkButton2" runat="server" CommandName="score" CommandArgument='<%# Eval("uploadid") %>'>score</asp:LinkButton>
                 <br />
             </ItemTemplate>
-            
+            <FooterTemplate>
+            <asp:Label Visible='<%#bool.Parse((DataList1.Items.Count==0).ToString())%>' runat="server" ID="lblNoRecord" Text="No Record Found!"></asp:Label>
+            </FooterTemplate>
             <SelectedItemStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
         </asp:DataList>   &nbsp;
         
         
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:connection %>" 
-            SelectCommand="SELECT ass.[uploadid],usz.[username],[filename],ass.[assignto],[title], [abstract], [uploaddate], [url]  FROM [uploadinfo] uinfo,[assign] ass,[userinfo] usz  WHERE (ass.[uploadid] = uinfo.[uploadid] ) and ([username]=ass.[assignto]) and (ass.[assignto]=@name)">
+            SelectCommand="SELECT ass.[uploadid],usz.[username],[filename],ass.[assignto],[title], [abstract], [uploaddate], [url]  FROM [uploadinfo] uinfo,[assign] ass,[userinfo] usz  WHERE (ass.[uploadid] = uinfo.[uploadid] ) and ([username]=ass.[assignto]) and (ass.[assignto]=@name)and ass.[uploadid] not in (select uploadingid from score where([scoringid]=@userid))">
             <SelectParameters>
                 <asp:SessionParameter Name="name" SessionField="name" Type="String" />
+                 <asp:SessionParameter Name="userid" SessionField="userid" Type="String" />
             </SelectParameters>
         </asp:SqlDataSource>
     

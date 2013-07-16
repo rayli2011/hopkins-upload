@@ -35,6 +35,8 @@ public partial class _Default : System.Web.UI.Page
             else if (reader[4].ToString() == "F")
             {
                 Session["categ"] = reader[5].ToString();
+            
+                Session["userid"] = reader[3];
                 Response.Redirect("teacher.aspx");
               
             }
