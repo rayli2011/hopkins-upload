@@ -21,7 +21,7 @@ public partial class modify : System.Web.UI.Page
         {
         uploadid = Convert.ToInt16(Session["uploadid"]);
         //version should +1 as updated!
-        version = Convert.ToInt16(Session["verson"])+1;
+        version = Convert.ToInt16(Session["verson"]);
 
         TextBox1.Text = Session["title"].ToString();
         t2.Value= Session["abstract"].ToString();
@@ -43,7 +43,8 @@ public partial class modify : System.Web.UI.Page
         int pid =Convert.ToInt16( Session["upid"]);
         SqlConnection con = new SqlConnection("Data Source=FENG-PC;Initial Catalog= files;Trusted_Connection=True");
         con.Open();
-        string select = "update uploadinfo set title='" + TextBox1.Text + "',abstract='" + t2.Value + "',filename='" + filename + "',uploaddate='" + DateTime.Today + "',url='" + url + "',version ='" + version+1 + "' where uploadid='"+pid+"'";
+        int v = Convert.ToInt16(Session["verson"]) + 1;
+        string select = "update uploadinfo set title='" + TextBox1.Text + "',abstract='" + t2.Value + "',filename='" + filename + "',uploaddate='" + DateTime.Today + "',url='" + url + "',version ='" + v + "' where uploadid='" + pid + "'";
 
         SqlCommand seletive = new SqlCommand(select, con);
         SqlDataReader reader = seletive.ExecuteReader();

@@ -18,10 +18,10 @@ public partial class studentover : System.Web.UI.Page
         //Session["ves"]=
         //Session["studentstates"] = "1";
     }
-    protected void GridViewCommandEventHandler (object sender, GridViewCommandEventArgs e)
-    {
+    protected void GridViewCommandEventHandler(object sender, GridViewCommandEventArgs e)
+    { }
 
-    }
+ 
 
 
   

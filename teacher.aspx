@@ -56,21 +56,22 @@
                <%-- <asp:LinkButton ID="LinkButton1" runat="server" CommandName="grademe" CommandArgument='<%# Eval("uploadid") %>' >grade myself</asp:LinkButton>--%>   
                <asp:LinkButton ID="LinkButton2" runat="server" CommandName="grademe" CommandArgument='<%# Eval("uploadid") %>'>grade!!!!!</asp:LinkButton>
                 <br />
-
+              </ItemTemplate>
             <FooterTemplate>
             <asp:Label Visible='<%#bool.Parse((DataList1.Items.Count==0).ToString())%>' runat="server" ID="lblNoRecord" Text="No Record Found!"></asp:Label>
             </FooterTemplate>
-            </ItemTemplate>
+            
             <SelectedItemStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
         </asp:DataList>   &nbsp;
         
         
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:connection %>" 
-            SelectCommand="SELECT[uploadid],[filename], [title], [abstract], [uploaddate], [category], [url] FROM [uploadinfo] WHERE ([category] = @category) and [uploadid] not in (select uploadingid from score where([scoringid]=@userid))">
+            SelectCommand="SELECT[uploadid],[filename], [title], [abstract], [uploaddate], [category], [url] FROM [uploadinfo] WHERE ([category] = @category) and [uploadid] not in (select uploadingid from score where([scoringid]=@userid) or ([scoringid]=@TAid))">
             <SelectParameters>
                 <asp:SessionParameter Name="category" SessionField="categ" Type="String" />
-                   <asp:SessionParameter Name="userid" SessionField="userid" Type="String" />
+                <asp:SessionParameter Name="userid" SessionField="userid" Type="String" />
+                <asp:SessionParameter Name="TAid" SessionField="TAid" Type="String" />
             </SelectParameters>
         </asp:SqlDataSource>
     

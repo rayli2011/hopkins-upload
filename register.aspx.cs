@@ -30,10 +30,11 @@ public partial class register : System.Web.UI.Page
             reader.Close();
             int rowid = Convert.ToInt16(sellect.ExecuteScalar());
             Session["userid"] = rowid;
-            Session["studentstates"] = "1";
-            Session["username"] = username.Text;
-            Response.Redirect("studentover.aspx");
+     
+            Session["name"] = username.Text;
             con.Close();
+            Response.Redirect("About.aspx");
+            
         }
         else
             Response.Write("your passward did not match");

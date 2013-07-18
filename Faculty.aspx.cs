@@ -54,7 +54,7 @@ public partial class Faculty : System.Web.UI.Page
         SqlDataReader reader = seletive.ExecuteReader();
 
         con.Close();
-
+        Response.Redirect("about.aspx");
 
     }
 

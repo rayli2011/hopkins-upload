@@ -14,7 +14,7 @@ public partial class TA : System.Web.UI.Page
     string filename;
     public int state ;
     public int uid;
-    public string url;
+    string url;
     public string username;
     public int version;
 
@@ -34,18 +34,18 @@ public partial class TA : System.Web.UI.Page
 
     }
     protected void UploadButton_Click(object sender, EventArgs e)
-    {
+    {  
        
         string selective;
         int uploadid = Convert.ToInt32(Session["userid"].ToString());
-        if (FileUpload1.HasFile)
-        {
+      
+       
             filename = Path.GetFileName(FileUpload1.FileName);
             FileUpload1.SaveAs(Server.MapPath(".\\Upload\\") + filename);
             url = "~/Upload/" + filename;
 
             
-        }
+       
         string select1 = "insert into uploadinfo (uploadpersonid,title,abstract,filename,uploaddate,category,url,version)values('" + uploadid + "','" + title.Text + "','" + T1.Value + "','" + filename + "','" + DateTime.Today + "','" + DropDownList1.SelectedValue + "','" + url + "','" + version + "')";
         //string select2 = "update uploadinfo set (uploadpersonid,title,abstract,filename,uploaddate,category,url,version)values('" + uploadid + "','" + title.Text + "','" + T1.Value + "','" + filename + "','" + DateTime.Today + "','" + DropDownList1.SelectedValue + "','" + url + "','" + version + "')";
        // if (state == 2)

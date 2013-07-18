@@ -19,14 +19,15 @@ public partial class _Default : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection("Data Source=FENG-PC;Initial Catalog= files;Trusted_Connection=True");
         con.Open();
-        string select = "select username,password,Email,usrid,categorise,categ from userinfo where Email= '" + username.Text + "'AND password='" + passwrod.Text + "'";
+        string select = "select username,password,Email,usrid,categorise,categ,TAid from userinfo where username= '" + username.Text + "'AND password='" + passwrod.Text + "'";
         SqlCommand seletive = new SqlCommand(select, con);
         SqlDataReader reader = seletive.ExecuteReader();
         if (reader.Read())
         {
-
+        
             Session["userid"] = reader[3];
             Session["name"] = reader[0];
+          
             if (reader[4].ToString() == "S")
             {
                
@@ -35,7 +36,7 @@ public partial class _Default : System.Web.UI.Page
             else if (reader[4].ToString() == "F")
             {
                 Session["categ"] = reader[5].ToString();
-            
+                Session["TAid"] = reader[6];
                 Session["userid"] = reader[3];
                 Response.Redirect("teacher.aspx");
               
@@ -44,7 +45,10 @@ public partial class _Default : System.Web.UI.Page
             {
                 Response.Redirect("assistant.aspx");
             }
-
+            else if (reader[4].ToString() == "AD")
+            {
+                Response.Redirect("admin.aspx");
+            }
 
         }
         else

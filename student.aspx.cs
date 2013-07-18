@@ -58,7 +58,8 @@ public partial class students : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection("Data Source=FENG-PC;Initial Catalog= files;Trusted_Connection=True");
         con.Open();
-        string select ="select * from uploadinfo where uploadpersonid='"+userid+"' and uploaddate in( select max(uploaddate) from uploadinfo where uploadpersonid='"+userid+"') " ;
+        //string select ="select * from uploadinfo where uploadpersonid='"+userid+"' and uploaddate in( select max(uploaddate) from uploadinfo where uploadpersonid='"+userid+"') " ;
+        string select = "select * from uploadinfo where uploadid='" + Convert.ToInt32(Session["upid"])+"' ";
         SqlCommand seletive = new SqlCommand(select, con);
         SqlDataReader reader = seletive.ExecuteReader();
         if (reader.Read())
