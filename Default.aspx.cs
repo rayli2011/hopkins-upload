@@ -28,12 +28,12 @@ public partial class _Default : System.Web.UI.Page
             Session["userid"] = reader[3];
             Session["name"] = reader[0];
           
-            if (reader[4].ToString() == "S")
+            if (reader[4].ToString() == "2")
             {
                
                 Response.Redirect("studentover.aspx");
             }
-            else if (reader[4].ToString() == "F")
+            else if (reader[4].ToString() == "1")
             {
                 Session["categ"] = reader[5].ToString();
                 Session["TAid"] = reader[6];
@@ -41,11 +41,11 @@ public partial class _Default : System.Web.UI.Page
                 Response.Redirect("teacher.aspx");
               
             }
-            else if (reader[4].ToString() == "TA")
+            else if (reader[4].ToString() == "3")
             {
                 Response.Redirect("assistant.aspx");
             }
-            else if (reader[4].ToString() == "AD")
+            else if (reader[4].ToString() == "0")
             {
                 Response.Redirect("admin.aspx");
             }

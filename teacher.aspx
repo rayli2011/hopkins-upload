@@ -21,8 +21,16 @@
     <div class="style1">
     
         <div class="style2">
-            <strong>below is the list of the article below to your categrize:<br />
-            please grade or assign to TA gradute. thanks</strong><br />
+            <strong>below is the list of the article below to your categrize:
+            please grade or assign to TA gradute. thank<br />
+            <br />
+            <br />
+            </strong>
+            <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
+                Text="Add a New GA" Width="251px" />
+            <br />
+            <br />
+            <br />
         </div>
         <asp:DataList 
             ID="DataList1" runat="server" 
