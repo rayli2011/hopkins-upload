@@ -19,7 +19,7 @@ public partial class _Default : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection("Data Source=FENG-PC;Initial Catalog= files;Trusted_Connection=True");
         con.Open();
-        string select = "select username,password,Email,usrid,categorise,categ,TAid from userinfo where username= '" + username.Text + "'AND password='" + passwrod.Text + "'";
+        string select = "select username,password,Email,usrid,categorise,catego,belogntoteach from userinfo where username= '" + username.Text + "'AND password='" + passwrod.Text + "'";
         SqlCommand seletive = new SqlCommand(select, con);
         SqlDataReader reader = seletive.ExecuteReader();
         if (reader.Read())

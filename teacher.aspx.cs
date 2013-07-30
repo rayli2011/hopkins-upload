@@ -38,6 +38,8 @@ public partial class teacher : System.Web.UI.Page
     {
         catego = Convert.ToInt16(Session["categ"]);
         Session["catego"] = catego;
+        Session["username"] = username;
+        Session["userid"] = useid;
         Response.Redirect("Assign.aspx");
     }
 }

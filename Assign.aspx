@@ -5,19 +5,37 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .style1
+        {
+            width: 58%;
+            background-color: #CCFF99;
+        }
+        .style2
+        {
+            width: 95px;
+        }
+        .style3
+        {
+            background-color: #FF66FF;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
     
-        welcome&nbsp;
-        <asp:Label ID="Label1" runat="server" style="color: #66FFFF" Text="Label"></asp:Label>
-&nbsp;!!!<br />
-        ------------------------------------------------------------------<br />
+        <span class="style3">welcome&nbsp;
+        </span>
+        <asp:Label ID="Label1" runat="server" style="color: #66FFFF" Text="Label" 
+            CssClass="style3"></asp:Label>
+        <span class="style3">&nbsp;!!!</span><br />
+        ---------------------------------------------------------------------------------------<br />
         you already has:<br />
         <br />
         <asp:FormView ID="FormView1" runat="server" AllowPaging="True" 
-            DataSourceID="SqlDataSource1">
+            DataSourceID="SqlDataSource1" BackColor="LightGoldenrodYellow" 
+            BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black">
             <EditItemTemplate>
                 usrid:
                 <asp:Label ID="usridLabel1" runat="server" Text='<%# Eval("usrid") %>' />
@@ -38,6 +56,9 @@
                 &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
                     CausesValidation="False" CommandName="Cancel" Text="Cancel" />
             </EditItemTemplate>
+            <EditRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+            <FooterStyle BackColor="Tan" />
+            <HeaderStyle BackColor="Tan" Font-Bold="True" />
             <InsertItemTemplate>
                 username:
                 <asp:TextBox ID="usernameTextBox" runat="server" 
@@ -71,17 +92,18 @@
                 <br />
 
             </ItemTemplate>
+            <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" 
+                HorizontalAlign="Center" />
         </asp:FormView>
         <br />
-        <br />
+        ----------------------------------------------------------------------------------------<br />
         please assign a TA for your class!<br />
         <br />
-        <asp:ListBox ID="ListBox1" runat="server" Width="191px">
-            <asp:ListItem Value="">Please select an item</asp:ListItem>
+        <asp:ListBox ID="ListBox1" runat="server" Width="191px" 
+            DataTextField="username" DataValueField="usrid" 
+            onselectedindexchanged="ListBox1_SelectedIndexChanged" AutoPostBack="True" 
+            style="background-color: #CCFFFF">
 
-            <asp:ListItem Value="1">Item 1</asp:ListItem>
-
-            <asp:ListItem Value="2">Item 2</asp:ListItem>
 
         </asp:ListBox>
         <br />
@@ -91,13 +113,41 @@
             
         
             
-            SelectCommand="SELECT [usrid], [username], [belogntoteach], [catego] FROM [userinfo] WHERE ([belogntoteach] = @belogntoteach)">
+            
+            SelectCommand="SELECT [username], [belogntoteach], [usrid], [catego] FROM [userinfo] WHERE ([belogntoteach] = @belogntoteach)">
         <selectparameters>
-            <asp:SessionParameter Name="belogntoteach" SessionField="uid" Type="Int32" />
+            <asp:SessionParameter Name="belogntoteach" SessionField="userid" Type="Int32" />
         </selectparameters>
        
         </asp:SqlDataSource>
+        <br />
+        ===========================================================<br />
+        <table id="t1" class="style1" visible="false" runat="server">
+            <tr>
+                <td class="style2">
+                    TUID:</td>
+                <td>
+                    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    name:</td>
+                <td>
+                    <asp:Label ID="name" runat="server" Text="name"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    categorize:</td>
+                <td>
+                    <asp:DropDownList ID="DropDownList1" runat="server" Height="16px" Width="210px">
+                    </asp:DropDownList>
+                </td>
+            </tr>
+        </table>
     </div>
+    <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="assign" />
     </form>
 </body>
 </html>
