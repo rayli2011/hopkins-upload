@@ -49,15 +49,21 @@
      <br />
     <asp:DropDownList ID="DropDownList1" runat="server" Height="22px" 
         style="background-color: #FFCCCC" Width="272px">
-        <asp:ListItem Value="HCI">Human Computer Interaction</asp:ListItem>
-        <asp:ListItem Value="NWS">NetWork Security</asp:ListItem>
-        <asp:ListItem Value="DB">DataBase</asp:ListItem>
+            <asp:ListItem>Select a categorize</asp:ListItem>
+            <asp:ListItem Value="2">DB</asp:ListItem>
+            <asp:ListItem Value="1">NWS</asp:ListItem>
+            <asp:ListItem Value="3">HCI</asp:ListItem>
+            <asp:ListItem Value="4">DB_NWS</asp:ListItem>
+            <asp:ListItem Value="5">DB_HCI</asp:ListItem>
+            <asp:ListItem Value="6">NWS_HCI</asp:ListItem>
+            <asp:ListItem Value="7">DB_NWS_HCI</asp:ListItem>
+
     </asp:DropDownList>
     <br />
      <br />
     <asp:Button runat="server" id="UploadButton" text="Upload" 
         onclick="UploadButton_Click" Height="21px" />
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="Label1" runat="server" Visible="false" Text="Label"></asp:Label>
     <br />
     <br />
      

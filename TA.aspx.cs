@@ -10,9 +10,11 @@ using System.Data.SqlClient;
 public partial class TA : System.Web.UI.Page
 {
     public string uid;
+    Class1 cs = new Class1();
 
     protected void Page_Load(object sender, EventArgs e)
     {
+          
           uid = Session["userid"].ToString();
           string name = Session["name"].ToString();
           SqlConnection con = new SqlConnection("Data Source=FENG-PC;Initial Catalog= files;Trusted_Connection=True");
@@ -33,12 +35,22 @@ public partial class TA : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
+        int score=0;
+
+        for (int i = 0; i < RadioButtonList1.Items.Count; i++)
+        {
+            if (RadioButtonList1.Items[i].Selected == true)
+            {
+                score =Convert.ToInt16(RadioButtonList1.Items[i].Value);
+            }
+
+        }
         SqlConnection con = new SqlConnection("Data Source=FENG-PC;Initial Catalog= files;Trusted_Connection=True");
         con.Open();
-        string select = " insert into score(uploadingid,uploaderid,scoringid,score,comments,scoredate) values('" + Session["uid"].ToString() + "','" + Session["lerid"].ToString() + "','" + Session["scoreing"].ToString() + "','" + TextBox1.Text + "','" + TextBox2.Text + "','" + DateTime.Today + "') ";
+        string select = " insert into score(uploadingid,uploaderid,scoringid,score,comments,scoredate) values('" + Session["uid"].ToString() + "','" + Session["lerid"].ToString() + "','" + Session["scoreing"].ToString() + "','" + score + "','" + TextBox2.Text + "','" + DateTime.Today + "') ";
         SqlCommand seletive = new SqlCommand(select, con);
         SqlDataReader reader = seletive.ExecuteReader();
-
+        cs.writelog(Session["name"].ToString() + " grade article id " + Session["uid"].ToString());
         con.Close();
         Response.Redirect("about.aspx");
     }

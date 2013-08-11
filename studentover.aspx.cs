@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class studentover : System.Web.UI.Page
 {
+    Class1 cs = new Class1();
     protected void Page_Load(object sender, EventArgs e)
     {
         int sid;
@@ -21,17 +22,14 @@ public partial class studentover : System.Web.UI.Page
     protected void GridViewCommandEventHandler(object sender, GridViewCommandEventArgs e)
     { }
 
- 
-
-
-  
     protected void ray (object sender, EventArgs e)
     {
        Button btn = (Button)sender;
        int CommandArgument =Convert.ToInt16( btn.CommandArgument);
        Session["upid"] = CommandArgument;
+       cs.writelog(" " + Session["name"].ToString() + " has check his articles states of " + Convert.ToInt16(Session["userid"].ToString()));
        Response.Redirect("student.aspx");
-
+      
     }
     protected void GridView1_SelectedIndexChanged1(object sender, EventArgs e)
     {

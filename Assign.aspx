@@ -103,16 +103,14 @@
             DataTextField="username" DataValueField="usrid" 
             onselectedindexchanged="ListBox1_SelectedIndexChanged" AutoPostBack="True" 
             style="background-color: #CCFFFF">
-
+            
 
         </asp:ListBox>
         <br />
         <br />
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:connection %>" 
-            
-        
-            
+
             
             SelectCommand="SELECT [username], [belogntoteach], [usrid], [catego] FROM [userinfo] WHERE ([belogntoteach] = @belogntoteach)">
         <selectparameters>
@@ -148,6 +146,8 @@
         </table>
     </div>
     <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="assign" />
+    &nbsp;<asp:Button ID="Button2" runat="server" onclick="Button2_Click" 
+        Text="Log out"  Visible="false" Width="105px" />
     </form>
 </body>
 </html>

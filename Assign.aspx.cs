@@ -8,9 +8,12 @@ using System.Data.SqlClient;
 using System.Data.Sql;
 using System.Data;
 
+
+
 public partial class Assign : System.Web.UI.Page
 {
     public string select;
+    Class1 cs=new Class1();
     protected void Page_Load(object sender, EventArgs e)
     {
         if(!IsPostBack)
@@ -22,43 +25,44 @@ public partial class Assign : System.Web.UI.Page
 
         if (Convert.ToInt16(Session["categ"]) == 1)
         {
-            select = "select username,usrid,categorise,catego,belogntoteach from userinfo where catego= 1 and categorise<>1 ";
+            select = "select username,usrid,categorise,catego,belogntoteach from userinfo where catego= 1 and categorise=2";
             DropDownList1.Items.Add(new ListItem("NWS", "1"));
         }
         else if (Convert.ToInt16(Session["categ"]) == 2)
         {
-            select = "select username,usrid,categorise,catego,belogntoteach from userinfo where catego= 2 and categorise<>1";
+            select = "select username,usrid,categorise,catego,belogntoteach from userinfo where catego= 2 and categorise=2";
             DropDownList1.Items.Add(new ListItem("DB", "2"));
         }
         else if (Convert.ToInt16(Session["categ"]) == 3)
         {
-            select = "select username,usrid,categorise,catego,belogntoteach from userinfo where catego= 3 and categorise<>1";
+            select = "select username,usrid,categorise,catego,belogntoteach from userinfo where catego= 3 and categorise=2";
             DropDownList1.Items.Add(new ListItem("HCI", "3"));
         }
         else if (Convert.ToInt16(Session["categ"]) == 4)
         {
-            select = "select username,usrid,categorise,catego,belogntoteach from userinfo where catego= 1 or catego= 2 or catego=4 and categorise<>1";
+            select = "select username,usrid,categorise,catego,belogntoteach from userinfo where (catego= 1 or catego= 2 or catego=4)and categorise=2";
             DropDownList1.Items.Add(new ListItem("NWS", "1"));
             DropDownList1.Items.Add(new ListItem("DB", "2"));
             DropDownList1.Items.Add(new ListItem("NWS_DB", "4"));
         }
         else if (Convert.ToInt16(Session["categ"]) == 5)
         {
-            select = "select username,usrid,categorise,catego,belogntoteach from userinfo where catego= 2 or catego= 3 or catego= 5 and categorise<>1 ";
+            //select = "select username,usrid,categorise,catego,belogntoteach from userinfo where (catego= 2 or catego= 3 or catego= 5) and categorise<>1 and belogntoteach<>'" + Convert.ToInt16(Session["userid"]) + "'";
+            select = "select username,usrid,categorise,catego,belogntoteach from userinfo where (catego= 2 or catego= 3 or catego= 5) and categorise=2";
             DropDownList1.Items.Add(new ListItem("HCI", "3"));
             DropDownList1.Items.Add(new ListItem("DB", "2"));
             DropDownList1.Items.Add(new ListItem("DB_HCI", "5"));
         }
         else if (Convert.ToInt16(Session["categ"]) == 6)
         {
-            select = "select username,usrid,categorise,catego,belogntoteach from userinfo where catego= 1 or catego= 3 catego= 6 and categorise<>1";
+            select = "select username,usrid,categorise,catego,belogntoteach from userinfo where (catego= 1 or catego= 3 or catego= 6) and categorise=2";
             DropDownList1.Items.Add(new ListItem("HCI", "3"));
             DropDownList1.Items.Add(new ListItem("NWS", "1"));
             DropDownList1.Items.Add(new ListItem("NWS_HCI", "6"));
         }
         else if (Convert.ToInt16(Session["categ"]) == 7)
         {
-            select = "select username,usrid,categorise,catego,belogntoteach from userinfo where catego= 1 or catego= 2 or catego= 3 or catego=4 or catego= 5 or catego=6 or catego=7 and categorise<>1";
+            select = "select username,usrid,categorise,catego,belogntoteach from userinfo where (catego= 1 or catego= 2 or catego= 3 or catego=4 or catego= 5 or catego=6 or catego=7 )and categorise=2 ";
             DropDownList1.Items.Add(new ListItem("NWS", "1"));
             DropDownList1.Items.Add(new ListItem("HCI", "3"));
             DropDownList1.Items.Add(new ListItem("DB", "2"));
@@ -75,9 +79,15 @@ public partial class Assign : System.Web.UI.Page
         SqlDataAdapter adap = new SqlDataAdapter(seletive);
         DataSet ds = new DataSet();
         adap.Fill(ds);
+            if(ds.Tables[0].Rows.Count == 0)
+            {
+                Button2.Visible = true;
+                 ListBox1.Items.Add(new ListItem("there is no more new student belong to your range,you already select them all", " "));
+            }
+            else{
         ListBox1.DataSource = ds;
         ListBox1.DataBind();
-
+            }
         }
        
 
@@ -111,5 +121,18 @@ public partial class Assign : System.Web.UI.Page
         string select = "update userinfo set categorise=3 ,catego='" + DropDownList1.SelectedValue + "',belogntoteach='" + Convert.ToInt16(Session["userid"]) + "' where usrid='" + ListBox1.SelectedValue + "'";
         SqlCommand seletive = new SqlCommand(select, con);
         SqlDataReader reader = seletive.ExecuteReader();
+
+        Response.Write("<script language=javascript>alert('updates!');</script>");
+        Response.Redirect("Default.aspx");
+        
     }
+     
+
+protected void  Button2_Click(object sender, EventArgs e)
+{
+        Session.Abandon();
+        Session.RemoveAll();
+        Response.Redirect("Default.aspx");
+        cs.writelog("Administrator has log out on "+DateTime.Now.ToString() );
+}
 }

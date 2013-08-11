@@ -1,0 +1,7 @@
+1.admin 可以管理course和user
+2.teacher 可以出题，类型为文本，下拉，单选
+3.student答题。
+
+
+默认teacher 用户名 1 密码 1
+默认student 用户名 2 密码 2

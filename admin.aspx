@@ -35,8 +35,8 @@
                 SortExpression="regdate" />
             <asp:BoundField DataField="categorise" HeaderText="categorise" 
                 SortExpression="categorise" />
-            <asp:BoundField DataField="categ" HeaderText="categ" 
-                SortExpression="categ" />
+            <asp:BoundField DataField="catego" HeaderText="catego" 
+                SortExpression="catego" />
              
                 
      <%--       <asp:ButtonField CommandName="changed" HeaderText="Details" ShowHeader="True" 
@@ -66,7 +66,7 @@
     </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:connection %>" 
-        SelectCommand="SELECT [usrid],[username],[regdate], [categorise], [categ] FROM [userinfo] where usrid <> 7 ">
+        SelectCommand="SELECT [usrid],[username],[regdate], [categorise], [catego] FROM [userinfo] where categorise <> 0 ">
         <selectparameters>
         <asp:SessionParameter Name="userid" SessionField="userid" />
         </selectparameters>
@@ -89,9 +89,8 @@
                     <asp:DropDownList ID="FF" runat="server" BorderColor="DarkGray" 
                         BorderStyle="Solid" BorderWidth="1px" Height="16px" Width="225px">
                         <asp:ListItem>Select a Type</asp:ListItem>
-                        <asp:ListItem Value="TA">TA</asp:ListItem>
-                        <asp:ListItem Value="F">Teacher</asp:ListItem>
-                        <asp:ListItem Value="S">Student</asp:ListItem>
+                        <asp:ListItem Value="1">Teacher</asp:ListItem>
+                        <asp:ListItem Value="2">Student</asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>
@@ -102,24 +101,20 @@
             <asp:DropDownList ID="DD" runat="server" BorderColor="DarkGray" Width="225px" 
                         BorderStyle="Solid" BorderWidth="1px" Height="16px">
             <asp:ListItem>Select a categorize</asp:ListItem>
-            <asp:ListItem Value="DB">database</asp:ListItem>
-            <asp:ListItem Value="NWS">network</asp:ListItem>
-            <asp:ListItem Value="HCI">human computer interaction</asp:ListItem>
+            <asp:ListItem Value="1">DB</asp:ListItem>
+            <asp:ListItem Value="1">NWS</asp:ListItem>
+            <asp:ListItem Value="3">HCI</asp:ListItem>
+            <asp:ListItem Value="4">DB_NWS</asp:ListItem>
+            <asp:ListItem Value="5">DB_HCI</asp:ListItem>
+            <asp:ListItem Value="6">NWS_HCI</asp:ListItem>
+            <asp:ListItem Value="7">DB_NWS_HCI</asp:ListItem>
+
             </asp:DropDownList>
                     </td>
             </tr>
-                 <tr>
-                <td>
-                    update if you have a TA:</td>
-                <td >
-                    
-                    <asp:TextBox ID="TextBox1" runat="server" Width="225px"></asp:TextBox>
-                    
-                </td>
-            </tr>
-        </table>
+                 </table>
         <br />
-        <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Button" 
+        <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="update!" 
             Width="104px"  Visible="false"/>
         <br />
         <br />

@@ -1,0 +1,295 @@
+t1 has login on7/31/2013 1:03:27 PM
+admin has login on  7/31/2013 7:54:41 PM
+admin has login on  7/31/2013 7:56:38 PM
+Administrator has update userid 20 on 7/31/2013 8:14:56 PM
+Administrator has update userid 20 on 7/31/2013 8:15:00 PM
+admin has login on  7/31/2013 8:15:13 PM
+admin has login on  7/31/2013 8:20:37 PM
+Administrator has update userid 20 on 7/31/2013 8:20:51 PM
+admin has login on  7/31/2013 8:20:59 PM
+s5 has login on  8/1/2013 12:45:39 AM
+s5 has login on  8/1/2013 12:46:42 AM
+22has login on8/1/2013 12:46:42 AM
+s5 has login on  8/1/2013 12:46:50 AM
+22has login on8/1/2013 12:46:50 AM
+s5 has login on  8/1/2013 12:46:52 AM
+22has login on8/1/2013 12:46:52 AM
+s5 has login on  8/1/2013 12:47:29 AM
+22has login on8/1/2013 12:47:29 AM
+s6 has login on  8/1/2013 12:54:06 AM
+s6 has login on  8/1/2013 12:55:56 AM
+s6 has login on  8/1/2013 12:56:40 AM
+ s6 has check his articles states of 23
+t1 has login on  8/1/2013 12:57:53 AM
+t1 has login on  8/1/2013 7:09:01 PM
+t1 has login on  8/5/2013 10:03:05 PM
+t1 has login on  8/5/2013 10:05:18 PM
+t1 has login on  8/5/2013 10:06:19 PM
+t1 has login on  8/5/2013 10:07:28 PM
+t1 has login on  8/5/2013 10:09:15 PM
+t1 has login on  8/6/2013 7:33:38 AM
+t1 has login on  8/6/2013 7:34:50 AM
+t1 has login on  8/6/2013 7:36:31 AM
+t1 has login on  8/6/2013 7:38:59 AM
+t1 has login on  8/6/2013 7:55:42 AM
+t1 has login on  8/6/2013 8:10:24 AM
+t1 has login on  8/6/2013 8:11:36 AM
+t1 has login on  8/6/2013 8:25:57 AM
+t1 has login on  8/6/2013 8:29:41 AM
+t1 has login on  8/6/2013 8:52:16 PM
+t1 has login on  8/6/2013 9:32:46 PM
+t1 has login on  8/6/2013 9:43:51 PM
+t1 has login on  8/6/2013 10:04:32 PM
+t1 has login on  8/6/2013 10:07:00 PM
+t1 has login on  8/6/2013 10:12:05 PM
+t1 has login on  8/6/2013 10:13:33 PM
+t1 has login on  8/6/2013 10:40:43 PM
+t1 has login on  8/6/2013 10:44:01 PM
+t1 has login on  8/6/2013 10:47:40 PM
+t1 has login on  8/6/2013 10:48:42 PM
+t1 has login on  8/6/2013 10:48:43 PM
+ t1 has confirm the score 
+ t1 has confirm the score 
+ t1 has confirm the score 
+t1 has login on  8/6/2013 10:54:24 PM
+ t1 has confirm the score 
+t1 has login on  8/6/2013 11:31:46 PM
+ t1 has confirm the score 
+s3 has login on  8/6/2013 11:33:09 PM
+s3 has login on  8/6/2013 11:49:26 PM
+t1 has login on  8/6/2013 11:50:06 PM
+ t1 has review all the article 
+t1 has login on  8/7/2013 12:58:02 AM
+ t1 has review all the article 
+ auto email has send to  rayli2011 on 8/7/2013 1:01:09 AM
+t1 has assign his TA 17 to grade the article 8/7/2013 1:01:09 AM
+s2 has login on  8/7/2013 1:02:14 AM
+s2 has login on  8/7/2013 1:03:39 AM
+t1 has login on  8/8/2013 11:23:49 AM
+t1 has login on  8/8/2013 2:38:30 PM
+ t1 has confirm the score 
+ t1 has confirm the score 
+ has confirm article15 8/8/2013 3:20:56 PM
+t1 has login on  8/8/2013 3:21:07 PM
+ t1 has confirm the score 
+ t1 has confirm the score 
+t1 has login on  8/8/2013 3:57:16 PM
+ t1 has confirm the score 
+ t1 has confirm the score 
+ t1 has confirm the score 
+t1 has login on  8/8/2013 4:08:05 PM
+ t1 has confirm the score 
+ t1 has confirm the score 
+ t1 has confirm the score 
+t1 has login on  8/8/2013 5:38:53 PM
+t1 has login on  8/8/2013 5:41:33 PM
+ t1 has review all the article 
+ auto email has send to  rayli2011 on 8/8/2013 5:41:58 PM
+t1 has assign his TA 17 to grade the article 8/8/2013 5:41:58 PM
+s2 has login on  8/8/2013 5:42:22 PM
+ s2 has submitt a new paper 
+t1 has login on  8/9/2013 10:38:52 AM
+s2 has login on  8/9/2013 10:39:03 AM
+s2 grade article id 15
+t1 has login on  8/9/2013 10:40:17 AM
+ t1 has confirm the score 
+ has confirm article15 8/9/2013 10:40:43 AM
+s2 has login on  8/9/2013 10:40:56 AM
+s3 has login on  8/9/2013 10:42:39 AM
+ s3 has check his articles states of 18
+t1 has login on  8/9/2013 10:59:00 AM
+admin has login on  8/9/2013 11:37:10 AM
+Administrator has update userid 24 on 8/9/2013 11:37:34 AM
+admin has login on  8/9/2013 12:11:42 PM
+t2 has login on  8/9/2013 12:20:31 PM
+admin has login on  8/9/2013 12:21:43 PM
+Administrator has update userid 22 on 8/9/2013 12:22:03 PM
+Administrator has update userid 23 on 8/9/2013 12:22:16 PM
+t2 has login on  8/9/2013 12:22:38 PM
+t2 has login on  8/9/2013 12:29:47 PM
+t2 has login on  8/9/2013 1:03:08 PM
+t2 has login on  8/9/2013 1:04:03 PM
+t2 has login on  8/9/2013 1:06:43 PM
+ t2 has confirm the score 
+t1 has login on  8/9/2013 1:12:13 PM
+t1 has login on  8/9/2013 1:12:44 PM
+t1 has login on  8/9/2013 1:13:11 PM
+ t1 has confirm the score 
+ t1 has review all the article 
+ auto email has send to  rayli2011 on 8/9/2013 1:14:00 PM
+t1 has assign his TA 23 to grade the article 8/9/2013 1:14:00 PM
+t1 has login on  8/9/2013 1:14:18 PM
+ t1 has confirm the score 
+t1 has login on  8/9/2013 1:15:38 PM
+ t1 has review all the article 
+ auto email has send to  rayli2011 on 8/9/2013 1:16:01 PM
+t1 has assign his TA 23 to grade the article 8/9/2013 1:16:01 PM
+t1 has login on  8/9/2013 1:16:17 PM
+s6 has login on  8/9/2013 1:16:31 PM
+s6 grade article id 15
+s2 has login on  8/9/2013 1:18:38 PM
+s3 has login on  8/9/2013 1:19:08 PM
+ s3 has check his articles states of 18
+ s3 has check his articles states of 18
+s3 has login on  8/9/2013 1:26:18 PM
+t1 has login on  8/9/2013 1:31:40 PM
+ t1 has confirm the score 
+ has confirm article15 8/9/2013 1:32:17 PM
+s3 has login on  8/9/2013 1:32:26 PM
+s3 has login on  8/9/2013 2:45:31 PM
+s3 has login on  8/9/2013 2:45:42 PM
+s3 has login on  8/9/2013 3:53:55 PM
+t3 has register for this system on8/9/2013 3:54:15 PM
+admin has login on  8/9/2013 3:54:36 PM
+Administrator has update userid 25 on 8/9/2013 3:54:49 PM
+t3 has login on  8/9/2013 3:54:58 PM
+s7 has register for this system on8/9/2013 3:55:54 PM
+admin has login on  8/9/2013 3:56:10 PM
+Administrator has update userid 26 on 8/9/2013 3:57:03 PM
+t3 has login on  8/9/2013 3:57:10 PM
+admin has login on  8/9/2013 3:58:25 PM
+Administrator has update userid 26 on 8/9/2013 3:58:39 PM
+t3 has login on  8/9/2013 3:58:49 PM
+s7 has login on  8/9/2013 3:59:02 PM
+s7 has login on  8/9/2013 3:59:10 PM
+t3 has login on  8/9/2013 3:59:26 PM
+s1 has login on  8/9/2013 4:00:02 PM
+t3 has login on  8/9/2013 4:00:32 PM
+s1 has login on  8/9/2013 4:01:40 PM
+ s1 has check his articles states of 16
+ s1 has modified his 4444444 version 0
+s6 has login on  8/9/2013 4:03:10 PM
+t3 has login on  8/9/2013 4:04:01 PM
+ t3 has review all the article 
+ auto email has send to  rayli2011 on 8/9/2013 4:04:15 PM
+t3 has assign his TA 26 to grade the article 8/9/2013 4:04:15 PM
+s7 has login on  8/9/2013 4:04:25 PM
+s7 grade article id 17
+s2 has login on  8/10/2013 12:47:26 AM
+s3 has login on  8/10/2013 12:56:55 AM
+t3 has login on  8/10/2013 12:57:51 AM
+ t3 has confirm the score 
+ has confirm article17 8/10/2013 12:57:57 AM
+s7 has login on  8/10/2013 2:15:23 AM
+t2 has login on  8/10/2013 2:16:00 AM
+ t2 has confirm the score 
+ t2 has review all the article 
+t2 grade article id 17 on 8/10/2013 2:16:56 AM
+t2 has login on  8/10/2013 2:17:14 AM
+ t2 has review all the article 
+t2 has assign his TA 22 to grade the article 8/10/2013 2:17:27 AM
+s5 has login on  8/10/2013 2:17:38 AM
+s7 has login on  8/10/2013 2:17:58 AM
+ s7 has check his articles states of 26
+ s7 has modified his readermes7 version 0
+t3 has login on  8/10/2013 2:19:31 AM
+ t3 has confirm the score 
+ t3 has review all the article 
+ auto email has send to  rayli2011 on 8/10/2013 2:19:52 AM
+t3 has assign his TA 26 to grade the article 8/10/2013 2:19:52 AM
+t3 has login on  8/10/2013 2:20:16 AM
+ t3 has review all the article 
+ auto email has send to  rayli2011 on 8/10/2013 2:20:29 AM
+t3 has assign his TA 26 to grade the article 8/10/2013 2:20:29 AM
+t2 has login on  8/10/2013 2:22:00 AM
+t2 has login on  8/10/2013 2:22:22 AM
+ t2 has review all the article 
+t2 grade article id 16 on 8/10/2013 2:22:39 AM
+t2 has login on  8/10/2013 2:23:29 AM
+ t2 has review all the article 
+ auto email has send to  rayli2011 on 8/10/2013 2:23:48 AM
+t2 has assign his TA 18 to grade the article 8/10/2013 2:23:48 AM
+s3 has login on  8/10/2013 2:23:59 AM
+ s3 has check his articles states of 18
+t3 has login on  8/10/2013 2:24:30 AM
+ t3 has review all the article 
+ auto email has send to  rayli2011 on 8/10/2013 2:24:56 AM
+t3 has assign his TA 26 to grade the article 8/10/2013 2:24:56 AM
+t3 has login on  8/10/2013 2:25:15 AM
+t3 has login on  8/10/2013 9:04:19 AM
+ t3 has review all the article 
+ auto email has send to  rayli2011 on 8/10/2013 9:04:57 AM
+t3 has assign his TA 26 to grade the article 8/10/2013 9:04:57 AM
+t2 has login on  8/10/2013 9:05:15 AM
+t3 has login on  8/10/2013 9:16:59 AM
+s7 has login on  8/10/2013 9:29:54 AM
+ s7 has check his articles states of 26
+s7 has login on  8/10/2013 9:30:11 AM
+s6 has login on  8/10/2013 9:34:09 AM
+s6 has login on  8/10/2013 9:34:19 AM
+ s6 has check his articles states of 23
+t2 has login on  8/10/2013 9:34:42 AM
+ t2 has confirm the score 
+ t2 has review all the article 
+ auto email has send to  rayli2011 on 8/10/2013 9:35:25 AM
+t2 has assign his TA 18 to grade the article 8/10/2013 9:35:25 AM
+s3 has login on  8/10/2013 9:35:46 AM
+ s3 has check his articles states of 18
+s3 has login on  8/10/2013 9:36:03 AM
+t2 has login on  8/10/2013 9:36:29 AM
+ t2 has review all the article 
+t2 has login on  8/10/2013 9:48:26 AM
+t2 has login on  8/10/2013 9:50:58 AM
+s6 has login on  8/10/2013 9:51:42 AM
+ s6 has check his articles states of 23
+t1 has login on  8/10/2013 9:52:31 AM
+t2 has login on  8/10/2013 9:52:59 AM
+t3 has login on  8/10/2013 9:53:16 AM
+ t3 has review all the article 
+ auto email has send to  rayli2011 on 8/10/2013 9:53:44 AM
+t3 has assign his TA 26 to grade the article 8/10/2013 9:53:44 AM
+t3 has login on  8/10/2013 9:53:58 AM
+s2 has login on  8/10/2013 9:55:51 AM
+s7 has login on  8/10/2013 9:56:02 AM
+s7 has login on  8/10/2013 9:57:45 AM
+t2 has login on  8/10/2013 9:57:56 AM
+ t2 has review all the article 
+ auto email has send to  rayli2011 on 8/10/2013 9:58:17 AM
+t2 has assign his TA 18 to grade the article 8/10/2013 9:58:17 AM
+s3 has login on  8/10/2013 9:58:29 AM
+t3 has login on  8/10/2013 9:58:40 AM
+ t3 has review all the article 
+ auto email has send to  rayli2011 on 8/10/2013 9:59:02 AM
+t3 has assign his TA 26 to grade the article 8/10/2013 9:59:02 AM
+s7 has login on  8/10/2013 9:59:12 AM
+s7 has login on  8/10/2013 9:59:23 AM
+s9 has register for this system on8/10/2013 10:19:28 PM
+admin has login on  8/10/2013 10:20:16 PM
+Administrator has update userid 27 on 8/10/2013 10:20:35 PM
+s9 has login on  8/10/2013 11:10:41 PM
+t3 has login on  8/10/2013 11:24:35 PM
+t3 has login on  8/10/2013 11:25:47 PM
+ t3 has review all the article 
+ auto email has send to  rayli2011 on 8/10/2013 11:26:03 PM
+t3 has assign his TA 27 to grade the article 8/10/2013 11:26:03 PM
+t2 has login on  8/10/2013 11:26:12 PM
+ t2 has review all the article 
+t3 has login on  8/10/2013 11:26:30 PM
+ t3 has confirm the score 
+s9 has login on  8/10/2013 11:26:44 PM
+ s9 has check his articles states of 27
+s9 has login on  8/10/2013 11:26:57 PM
+s9 grade article id 20
+s2 has login on  8/10/2013 11:28:01 PM
+s3 has login on  8/10/2013 11:28:10 PM
+ s3 has check his articles states of 18
+s9 has login on  8/10/2013 11:28:26 PM
+ s9 has check his articles states of 27
+t2 has login on  8/10/2013 11:28:58 PM
+s9 has login on  8/10/2013 11:29:14 PM
+s5 has login on  8/11/2013 12:34:20 AM
+s7 has login on  8/11/2013 12:37:01 AM
+s9 has login on  8/11/2013 12:38:27 AM
+s3 has login on  8/11/2013 12:41:43 AM
+s3 has login on  8/11/2013 12:47:29 AM
+t2 has login on  8/11/2013 12:48:33 AM
+ t2 has review all the article 
+t2 has assign his TA 22 to grade the article 8/11/2013 12:48:52 AM
+t2 has login on  8/11/2013 12:49:02 AM
+s5 has login on  8/11/2013 12:49:14 AM
+ s5 has check his articles states of 22
+s5 has login on  8/11/2013 12:49:33 AM
+s5 grade article id 23
+t2 has login on  8/11/2013 12:49:57 AM
+ t2 has confirm the score 
+ has confirm article23 8/11/2013 12:50:03 AM

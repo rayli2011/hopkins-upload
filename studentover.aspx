@@ -26,13 +26,13 @@
                 SortExpression="category" />
             <asp:BoundField DataField="version" HeaderText="version" 
                 SortExpression="version" />
-            <asp:BoundField DataField="filename" HeaderText="filename" 
-                SortExpression="filename" />        
+           
                 
      <%--       <asp:ButtonField CommandName="changed" HeaderText="Details" ShowHeader="True" 
                 Text="Status" />--%>
-             <asp:TemplateField HeaderText="changed2" ShowHeader="False">
+             <asp:TemplateField HeaderText="check out" ShowHeader="False">
               <ItemTemplate>
+              <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# Eval("url") %>' Text='<%# Eval("filename") %>' />      
                 <asp:Button ID="btn1" runat="server" CausesValidation="false" Text="status" CommandArgument='<%#Eval("uploadid") %>' OnClick="ray" />
                </ItemTemplate>
             </asp:TemplateField>    

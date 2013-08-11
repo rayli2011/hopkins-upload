@@ -27,14 +27,19 @@
             <br />
             </strong>
             <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
-                Text="Add a New GA" Width="251px" />
+                Text="Add a New GA" Width="157px" />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <asp:Button ID="Button2" runat="server" Text="confirm TA score" 
+                onclick="Button2_Click" Width="154px" />
             <br />
             <br />
             <br />
         </div>
         <asp:DataList 
             ID="DataList1" runat="server" 
-            DataSourceID="SqlDataSource1" 
+           
             Width="727px" 
             style="background-color: #FFCCFF; text-align: left;" 
             onselectedindexchanged="Page_Load" BackColor="White" 
@@ -73,7 +78,7 @@
         </asp:DataList>   &nbsp;
         
         
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+        <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:connection %>" 
             SelectCommand="SELECT[uploadid],[filename], [title], [abstract], [uploaddate], [category], [url] FROM [uploadinfo] WHERE ([category] = @category) and [uploadid] not in (select uploadingid from score where([scoringid]=@userid) or ([scoringid]=@TAid))">
             <SelectParameters>
@@ -81,7 +86,7 @@
                 <asp:SessionParameter Name="userid" SessionField="userid" Type="String" />
                 <asp:SessionParameter Name="TAid" SessionField="TAid" Type="String" />
             </SelectParameters>
-        </asp:SqlDataSource>
+        </asp:SqlDataSource>--%>
     
     </div>
     </form>

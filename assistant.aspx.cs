@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 public partial class assistant : System.Web.UI.Page
 {
     public int uid;
+    Class1 cs = new Class1();
     public string useid;
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -24,5 +25,16 @@ public partial class assistant : System.Web.UI.Page
             Response.Redirect("TA.aspx");
         }
 
+    }
+    protected void LinkButton3_Click(object sender, EventArgs e)
+    {
+        string  username= Session["name"].ToString();
+      
+        //Session["studentstatus"] = "1";
+
+        Session["userid"] = uid;
+        Session["name"] = username;
+        cs.writelog(" " + username + " has submitt a new paper ");
+        Response.Redirect("newload.aspx");
     }
 }

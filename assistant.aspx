@@ -21,8 +21,10 @@
     <div class="style1">
     
         <div class="style2">
-            <strong>below is the list of the article below to your categrize:<br />
-            please grade or assign to TA gradute. thanks</strong><br />
+            <strong> article below to your categrize:<br />
+            please grade or assign to TA gradute. thanks&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="LinkButton3" runat="server" onclick="LinkButton3_Click">Upload mypape</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><br />
         </div>
         <asp:DataList 
             ID="DataList1" runat="server" 
@@ -70,7 +72,7 @@
         
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:connection %>" 
-            SelectCommand="SELECT ass.[uploadid],usz.[username],[filename],ass.[assignto],[title], [abstract], [uploaddate], [url]  FROM [uploadinfo] uinfo,[assign] ass,[userinfo] usz  WHERE (ass.[uploadid] = uinfo.[uploadid] ) and ([username]=ass.[assignto]) and (ass.[assignto]=@name)and ass.[uploadid] not in (select uploadingid from score where([scoringid]=@userid))">
+            SelectCommand="SELECT distinct(ass.[uploadid]),usz.[usrid],[filename],ass.[assignto],[title], [abstract], [uploaddate], [url]  FROM [uploadinfo] uinfo,[assign] ass,[userinfo] usz  WHERE (ass.[uploadid] = uinfo.[uploadid] ) and (usz.[usrid]=ass.[assignto]) and (ass.[assignto]=@userid)and ass.[uploadid] not in (select uploadingid from score where([scoringid]=@userid))">
             <SelectParameters>
                 <asp:SessionParameter Name="name" SessionField="name" Type="String" />
                  <asp:SessionParameter Name="userid" SessionField="userid" Type="String" />

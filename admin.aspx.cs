@@ -11,8 +11,10 @@ public partial class admin : System.Web.UI.Page
 {
     public string a, b;
     public int userid;
-    protected void Page_Load(object sender, EventArgs e){
-      
+    Class1 cs = new Class1();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+   
        
         
     }
@@ -35,12 +37,13 @@ public partial class admin : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection("Data Source=FENG-PC;Initial Catalog= files;Trusted_Connection=True");
         con.Open();
-        string select = "update userinfo set categorise='" + FF.SelectedValue + "',categ='" + DD.SelectedValue + "',TAid='" + TextBox1.Text + "' where usrid='" + Convert.ToInt16(Session["id"]) + "'";
+        string select = "update userinfo set categorise='" + FF.SelectedValue + "',catego='" + DD.SelectedValue + "' where usrid='" + Convert.ToInt16(Session["id"]) + "'";
         SqlCommand seletive = new SqlCommand(select, con);
         SqlDataReader reader = seletive.ExecuteReader();
 
         T1.Visible = false;
         Button1.Visible = false;
+        cs.writelog(  "Administrator has update userid "+Convert.ToInt16(Session["id"])+" on " + DateTime.Now.ToString());
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
@@ -48,6 +51,6 @@ public partial class admin : System.Web.UI.Page
         Session.Abandon();
         Session.RemoveAll();
         Response.Redirect("Default.aspx");
-    
+        cs.writelog("Administrator has log out on "+DateTime.Now.ToString() );
     }
 }

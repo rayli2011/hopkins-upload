@@ -23,10 +23,23 @@
         <br />
         <br />
         your score:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="score" runat="server"></asp:TextBox>
         <br />
+        <asp:RadioButtonList 
+        ID="RadioButtonList1" runat="server" style="background-color: #CC66FF" 
+        Width="214px">
+        <asp:ListItem Value="1">1</asp:ListItem>
+        <asp:ListItem Value="2">2</asp:ListItem>
+        <asp:ListItem Value="3">3</asp:ListItem>
+        <asp:ListItem Value="4">4</asp:ListItem>
+        <asp:ListItem Value="5">5</asp:ListItem>
+        <asp:ListItem Value="6">6</asp:ListItem>
+        <asp:ListItem Value="7">7</asp:ListItem>
+        <asp:ListItem Value="8">8</asp:ListItem>
+        <asp:ListItem Value="9">9</asp:ListItem>
+    </asp:RadioButtonList>
         <br />
-        your comment:<asp:TextBox ID="comments" runat="server" Height="82px" 
+        your comment:<br />
+        <asp:TextBox ID="comments" runat="server" Height="82px" 
             Width="238px"></asp:TextBox>
         <br />
         <br />
@@ -42,17 +55,27 @@
         
             <br />
             <br />
-            TA-username(email):&nbsp;
-            <asp:TextBox ID="email" runat="server" Height="16px" 
-                Width="224px"></asp:TextBox>
+            TA-on list:&nbsp;
+            <asp:DropDownList ID="DropDownList1" runat="server" 
+                DataSourceID="SqlDataSource1" Height="67px" Width="226px"
+                 DataTextField="username" DataValueField="usrid">
+            </asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:connection %>" 
+                SelectCommand="SELECT [username],[usrid], [belogntoteach] FROM [userinfo] WHERE ([belogntoteach] = @belogntoteach)">
+                <SelectParameters>
+                    <asp:SessionParameter DefaultValue="scoreing" Name="belogntoteach" 
+                        SessionField="scoreing" Type="Int32" />
+                </SelectParameters>
+            </asp:SqlDataSource>
             <br />
             <br />
-            Email Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            <%--Email Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
             <asp:TextBox ID="tinfo" runat="server" Width="230px" Height="16px"></asp:TextBox>
             <br />
             <br />
             Email Boday:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="body" runat="server" Height="53px" Width="228px"></asp:TextBox>
+            <asp:TextBox ID="body" runat="server" Height="53px" Width="228px"></asp:TextBox>--%>
             <br />
             <br />
             <br />

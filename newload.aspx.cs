@@ -35,22 +35,29 @@ public partial class TA : System.Web.UI.Page
             filename = Path.GetFileName(FileUpload1.FileName);
             FileUpload1.SaveAs(Server.MapPath(".\\Upload\\") + filename);
             url = "~/Upload/" + filename;
+            string extension = Path.GetExtension(FileUpload1.PostedFile.FileName);
 
-            
-       
-        string select1 = "insert into uploadinfo (uploadpersonid,title,abstract,filename,uploaddate,category,url,version)values('" + uploadid + "','" + title.Text + "','" + T1.Value + "','" + filename + "','" + DateTime.Today + "','" + DropDownList1.SelectedValue + "','" + url + "','" + version + "')";
+            if (extension.ToLower() != ".txt")
+            {
+                Label1.Visible = true;
+                Label1.Text = " the file upload has to be in text or docx!";
+            }
+            else
+            {
+                string select1 = "insert into uploadinfo (uploadpersonid,title,abstract,filename,uploaddate,category,url,version)values('" + uploadid + "','" + title.Text + "','" + T1.Value + "','" + filename + "','" + DateTime.Today + "','" + DropDownList1.SelectedValue + "','" + url + "','" + version + "')";
 
-            selective = select1;
-            version = 1;
-    
+                selective = select1;
+                version = 1;
 
-        SqlConnection con = new SqlConnection("Data Source=FENG-PC;Initial Catalog= files;Trusted_Connection=True");
-        con.Open();
-       
-        SqlCommand seletive = new SqlCommand(selective, con);
-        SqlDataReader reader = seletive.ExecuteReader();
-        con.Close();
-        Session["name"] = username;
-        Response.Redirect("about.aspx");
+
+                SqlConnection con = new SqlConnection("Data Source=FENG-PC;Initial Catalog= files;Trusted_Connection=True");
+                con.Open();
+
+                SqlCommand seletive = new SqlCommand(selective, con);
+                SqlDataReader reader = seletive.ExecuteReader();
+                con.Close();
+                Session["name"] = username;
+                Response.Redirect("about.aspx");
+            }
     }
 }

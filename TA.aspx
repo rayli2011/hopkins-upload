@@ -41,7 +41,19 @@
     <br />
     ------------------------------------------------------------------------------------------<br />
     ------------------------------------------------------------------------------------------<br />
-    score:<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+    score:<asp:RadioButtonList 
+        ID="RadioButtonList1" runat="server" style="background-color: #CC66FF" 
+        Width="214px">
+        <asp:ListItem Value="1">1</asp:ListItem>
+        <asp:ListItem Value="2">2</asp:ListItem>
+        <asp:ListItem Value="3">3</asp:ListItem>
+        <asp:ListItem Value="4">4</asp:ListItem>
+        <asp:ListItem Value="5">5</asp:ListItem>
+        <asp:ListItem Value="6">6</asp:ListItem>
+        <asp:ListItem Value="7">7</asp:ListItem>
+        <asp:ListItem Value="8">8</asp:ListItem>
+        <asp:ListItem Value="9">9</asp:ListItem>
+    </asp:RadioButtonList>
     <br />
     <br />
     comments:<br />

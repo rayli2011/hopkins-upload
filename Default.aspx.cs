@@ -17,6 +17,8 @@ public partial class _Default : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
+        Class1 cs = new Class1();
+
         SqlConnection con = new SqlConnection("Data Source=FENG-PC;Initial Catalog= files;Trusted_Connection=True");
         con.Open();
         string select = "select username,password,Email,usrid,categorise,catego,belogntoteach from userinfo where username= '" + username.Text + "'AND password='" + passwrod.Text + "'";
@@ -27,7 +29,8 @@ public partial class _Default : System.Web.UI.Page
         
             Session["userid"] = reader[3];
             Session["name"] = reader[0];
-          
+            cs.writelog(reader[0].ToString() + " has login on  " + DateTime.Now.ToString());
+        
             if (reader[4].ToString() == "2")
             {
                
@@ -43,7 +46,10 @@ public partial class _Default : System.Web.UI.Page
             }
             else if (reader[4].ToString() == "3")
             {
-                Response.Redirect("assistant.aspx");
+                if(DropDownList1.SelectedValue=="2")
+                    Response.Redirect("studentover.aspx");
+                else 
+                   Response.Redirect("assistant.aspx");
             }
             else if (reader[4].ToString() == "0")
             {
@@ -55,7 +61,11 @@ public partial class _Default : System.Web.UI.Page
         {
             Response.Write("it is no user");
         }
-
+        cs.writelog(reader[3].ToString() + "has login on" + DateTime.Now.ToString());
         con.Close();
+
+     
+      
+
     }
 }
